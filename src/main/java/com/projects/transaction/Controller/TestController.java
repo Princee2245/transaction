@@ -17,7 +17,7 @@ public class TestController {
     private EmployeeService employeeService;
 
     @PostMapping("/addUser")
-    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) throws Exception{
+    public ResponseEntity<Employee> saveEmployeeDetails(@RequestBody Employee employee) throws Exception{
 
         Employee saved=employeeService.saveEmployee(employee);
         return new ResponseEntity<Employee>(saved, HttpStatus.CREATED);
