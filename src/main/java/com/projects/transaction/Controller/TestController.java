@@ -16,7 +16,7 @@ public class TestController {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/add")
+    @PostMapping("/addUser")
     public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) throws Exception{
 
         Employee saved=employeeService.saveEmployee(employee);
